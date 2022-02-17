@@ -6,10 +6,10 @@ stage('checkout code')
 git branch: 'development', credentialsId: 'fb8d72f7-be5e-4ca6-9b40-fb53feb557eb', url: 
 'https://github.com/mss-ec-apps-devopsbatch/maven-web-application.git'
 }
-stage('build')
+/*stage('build')
 {
 sh "${mavenhome}/bin/mvn clean package"
-}
+}*/
 stage('Execute sonarqube report')
 {
 sh "${mavenhome}/bin/mvn clean sonar:sonar"    
